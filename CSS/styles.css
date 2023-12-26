@@ -1,0 +1,55 @@
+body{
+    background-color: black;
+}
+
+.ball {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbit 3s forwards infinite linear, fade 3s forwards ease-in-out;
+}
+
+
+#ball2 {
+    background-color: blue;
+    animation-delay: 0.5s;
+}
+
+#ball3 {
+    background-color: green;
+    animation-delay: 1s;
+}
+
+#ball4 {
+    background-color: yellow;
+    animation-delay: 1.5s;
+}
+
+#ball5 {
+    background-color: orange;
+    animation-delay: 2s;
+}
+
+#ball6 {
+    background-color: purple;
+    animation-delay: 2.5s;
+}
+
+
+@keyframes orbit {
+    from {  -webkit-transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    to   {  -webkit-transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+@keyframes fade {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
